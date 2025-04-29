@@ -1,41 +1,104 @@
 <script setup>
-
+const produtos = [
+    {
+        id: 1,
+        titulo: 'A cinco passos de você',
+        genero: 'Romance',
+        preco:7.1,
+        quantidade:0,
+        img: '/images/acincopassosdevoce.png'     
+        
+    },
+    {
+        id: 2,
+        titulo: 'A Culpa é das Estrelas',
+        genero: 'Romance',
+        preco: 5.7,
+        quantidade: 0,
+        img: '/images/aculpaédasestrelas.png'
+       
+    },
+    {
+        id: 3,
+        titulo: 'Depois do Universo',
+        genero: 'Descrição breve 3'
+        preco: 9.9,
+        quantidade: 0,
+        img: '/images/depoisdouniverso.png'
+      
+        
+    },
+    {
+        id: 4,
+        titulo: 'Esposa de Mentirinha',
+        genero: 'Romance'
+        preco: 9.8,
+        quantidade: 0,
+        img: '/images/esposadementirinha.png'
+        
+     
+    },
+    {
+        id: 5,
+        titulo: 'Gente Grande',
+        genero: 'Comédia'
+        preco: 8.7,
+        quantidade: 0,
+        img: '/images/gentegrande.png'
+        
+       
+    }
+    {
+      id: 6,
+      titulo: 'Insterestelar',
+      genero: 'Ficção',
+      preco: 7.9,
+      quantidade: 0,
+      img: '/images/interestelar.png'
+    }
+];
 </script>
 
 <template>
-  <h1>bunda</h1>
+  <h1>CineBK </h1>
 
 
   <section id="filmes">
     <h2>Novidades!</h2>
-<div>
-  <div class="linha">    
-    <img src="/public/images/acincopassosdevoce.png" alt="filme1">
-    <img src="/public/images/aculpaédasestrelas.png" alt="filme2">
-    <img src="/public/images/depoisdouniverso.png" alt="filme3">
-    <img src="/public/images/esposadementirinha.png" alt="filme4">
+    
+
+  <div class="linha">   
+    <ul>
+      <li style="background-color: red;" v-for="livro in produtos">
+        <img :src="livro.img" alt="">
+        <p>{{ livro.titulo }}</p>
+        <p>{{ livro.resenha }}</p>
+      </li>
+    </ul>
   </div>
-  <div class="linha2">    
-    <img src="/public/images/minhaculpa.png" alt="filme9">
-    <img src="/public/images/paratodososgarotosquejaamei.png" alt="filme10">
-    <img src="/public/images/planetadosmacacos.png" alt="filme11">
-    <img src="/public/images/todotempoquetemos.png" alt="filme12">
-  </div>
-</div>
+
   </section>
 
 </template>
 
 <style scoped>
-.linha{
-  width: 10px;
+.linha ul {
   display: flex;
-  justify-content: space-between;
-  padding: 200px ;
+  
 }
-.linha2{
-  width: 10px;
+.linha2 ul {
   display: flex;
+}
+ul li{
+  flex: 1;
+}
+li img{
+  width: 70%;
+  height: 90%;
+}
+li p {
+  font-size: 1.5rem;
+  color: palevioletred;
 }
 
 </style>
