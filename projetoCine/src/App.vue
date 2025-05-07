@@ -6,7 +6,8 @@ const produtos = [
         genero: 'Romance',
         preco:7.1,
         quantidade:0,
-        img: '/images/acincopassosdevoce.png'     
+        img: '/images/acincopassosdevoce.png'
+        
         
     },
     {
@@ -21,7 +22,7 @@ const produtos = [
     {
         id: 3,
         titulo: 'Depois do Universo',
-        genero: 'Descrição breve 3'
+        genero: 'Romance',
         preco: 9.9,
         quantidade: 0,
         img: '/images/depoisdouniverso.png'
@@ -31,7 +32,7 @@ const produtos = [
     {
         id: 4,
         titulo: 'Esposa de Mentirinha',
-        genero: 'Romance'
+        genero: 'Romance',
         preco: 9.8,
         quantidade: 0,
         img: '/images/esposadementirinha.png'
@@ -41,13 +42,13 @@ const produtos = [
     {
         id: 5,
         titulo: 'Gente Grande',
-        genero: 'Comédia'
+        genero: 'Comédia',
         preco: 8.7,
         quantidade: 0,
         img: '/images/gentegrande.png'
         
        
-    }
+    },
     {
       id: 6,
       titulo: 'Insterestelar',
@@ -55,12 +56,46 @@ const produtos = [
       preco: 7.9,
       quantidade: 0,
       img: '/images/interestelar.png'
+    },
+    {
+      id: 7,
+      titulo: 'Marley e Eu',
+      genero: 'Comédia',
+      preco: 7.9,
+      quantidade: 0,
+      img: '/images/marleyeeu.png'
+    },
+    {
+      id: 8,
+      titulo: 'Meninas Malvadas',
+      genero: 'Comédia/Romance',
+      preco: 8.7,
+      quantidade: 0,
+      img: '/images/meangirls.png'
+    },
+    {
+      id: 9,
+      titulo: 'Minha Culpa',
+      genero: 'Romance',
+      preco: 8.7,
+      quantidade: 0,
+      img: '/images/minhaculpa.png'
+    },
+    {
+      id: 10,
+      titulo: 'Planeta dos Macacos',
+      genero: 'Ficção Científica/Ação',
+      preco: 8.7,
+      quantidade: 0,
+      img: '/images/planetadosmacacos.png'
     }
+
+
 ];
 </script>
 
 <template>
-  <h1>CineBK </h1>
+  <h1>CineBK</h1>
 
 
   <section id="filmes">
@@ -69,10 +104,13 @@ const produtos = [
 
   <div class="linha">   
     <ul>
-      <li style="background-color: red;" v-for="livro in produtos">
-        <img :src="livro.img" alt="">
-        <p>{{ livro.titulo }}</p>
-        <p>{{ livro.resenha }}</p>
+      <li style="background-color: white;" v-for="filmes in produtos">
+        <img :src="filmes.img" alt="">
+        <p class="titulo">{{ filmes.titulo }}</p>
+        <p>{{ filmes.genero }}</p>
+        <p>{{ filmes.preco }}</p>
+        <a href="/*carrinho*/">comprar</a>
+    
       </li>
     </ul>
   </div>
@@ -84,21 +122,37 @@ const produtos = [
 <style scoped>
 .linha ul {
   display: flex;
-  
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2vw;
+  list-style: none;
 }
-.linha2 ul {
-  display: flex;
+.linha p{
+  white-space: nowrap;
+  font-size: 1.3rem;
 }
-ul li{
-  flex: 1;
+.linha img {
+  flex: 1 1 20vw;
+  height: 20vw;
+  width: 70%;
+}
+.linha li {
+  width: 20%;
+  height: 30vw;
 }
 li img{
   width: 70%;
   height: 90%;
 }
 li p {
-  font-size: 1.5rem;
-  color: palevioletred;
+  font-size: 1.1rem;
+  color: rgb(0, 0, 0);
+}
+.titulo{
+font-size: 1.5rem;
+color: rgb(218, 136, 200);
 }
 
 </style>
