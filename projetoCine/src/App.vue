@@ -1,13 +1,13 @@
 <template>
   <div class="app">
     <header>
-      <h1>🎬 Loja de Filmes</h1>
+      <h1>🎬 CINE BK</h1>
       <button class="botao-carrinho" @click="mostrarCarrinho = !mostrarCarrinho">
         🛒 {{ mostrarCarrinho ? 'Fechar' : 'Carrinho' }}
       </button>
     </header>
 
-    <!-- Lista de Filmes -->
+
     <section class="filmes">
       <div v-for="filme in filmes" :key="filme.id" class="filme">
         <img :src="filme.capa" alt="Capa do filme" />
@@ -18,7 +18,7 @@
       </div>
     </section>
 
-    <!-- Carrinho -->
+
     <section v-if="mostrarCarrinho" class="carrinho">
       <h2>🛒 Carrinho de Compras</h2>
       <div v-if="carrinho.items.length === 0">
@@ -52,11 +52,69 @@ export default {
     return {
       mostrarCarrinho: false,
       filmes: [
-        { id: 1, titulo: 'Filme 1', sinopse: 'Aventura épica.', preco: 19.9, capa: 'https://placehold.co/300x180/000000/FF0000' },
-        { id: 2, titulo: 'Filme 2', sinopse: 'Drama comovente.', preco: 29.9, capa: 'https://placehold.co/300x180/000000/FF0000' },
-        { id: 3, titulo: 'Filme 3', sinopse: 'Comédia divertida.', preco: 14.9, capa: 'https://placehold.co/300x180/000000/FF0000' },
-        { id: 4, titulo: 'Filme 4', sinopse: 'Suspense eletrizante.', preco: 24.9, capa: 'https://placehold.co/300x180/000000/FF0000' },
-        { id: 5, titulo: 'Filme 5', sinopse: 'Animação colorida.', preco: 9.9, capa: 'https://placehold.co/300x180/000000/FF0000' }
+        { id: 1,
+        titulo: 'Planeta dos Macacos: A origem',
+        sinopse: 'Ficção Cietífica/Ação',
+        preco: 19.9,
+        capa: 'https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/35/38/19874625.jpg' },
+
+        { id: 2,
+        titulo: 'Marley & Eu',
+        sinopse: 'Infantil/Comédia',
+        preco: 29.9,
+        capa: 'https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/87/14/14/20028631.jpg' },
+
+        { id: 3,
+          titulo: 'M3GAN',
+          sinopse: 'Terror/Ficção',
+          preco: 14.9,
+          capa: 'https://br.web.img2.acsta.net/c_310_420/pictures/22/10/11/19/20/4591973.jpg' },
+
+        { id: 4,
+          titulo: 'Todos Menos Você',
+          sinopse: 'Comédia/Romance',
+          preco: 24.9,
+          capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/23/10/19/16/00/5781108.jpg' },
+
+        { id: 5,
+          titulo: 'Meninas Malvadas',
+          sinopse: 'Comédia/Romance',
+          preco: 9.9,
+          capa: 'https://br.web.img2.acsta.net/c_310_420/pictures/210/087/21008705_20130527194056821.jpg' },
+
+          {id: 6,
+            titulo: 'A Cinco Passos de Você',
+            sinopse: 'Comédia/Romance',
+            preco: 9.9,
+            capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/19/02/19/15/31/1517190.jpg'
+          },
+
+          {id: 7,
+            titulo: 'Como Eu Era Antes de Você',
+            sinopse: 'Comédia/Romance',
+            preco: 9.9,
+            capa: 'https://shoppingcidadedasflores.com.br/wp-content/uploads/2024/08/E-assim-que-acaba-500x675.jpg'
+          },
+
+          {id: 8,
+          titulo: 'Depois do Universo',
+          sinopse: 'Comédia/Romance',
+          preco: 9.9,
+          capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/22/10/27/23/27/5626842.jpg' },
+
+          {id: 9,
+            titulo: 'Sexta-Feira 13',
+            sinopse: 'Terror/Crime',
+            preco: 9.9,
+            capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/15/03/10/20/18/175541.jpg'
+          },
+
+          {id: 10,
+            titulo: 'Os Farofeiros',
+            sinopse: 'Comédia',
+            preco: 9.9,
+            capa: 'https://br.web.img2.acsta.net/c_310_420/pictures/18/01/03/19/24/3938254.jpg'
+          },
       ],
       carrinho: {
         items: [],
@@ -157,7 +215,7 @@ header {
   font-weight: bold;
   margin: 0.5rem 0;
 }
-
+/*carrinho css*/
 .botao-adicionar {
   background-color: #ff0000;
   color: #fff;
