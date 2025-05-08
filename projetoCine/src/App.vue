@@ -47,6 +47,7 @@
 </template>
 
 <script>
+//script lista de filmes e carrinho//
 export default {
   data() {
     return {
