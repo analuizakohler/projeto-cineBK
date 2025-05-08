@@ -177,7 +177,7 @@ header {
   align-items: center;
   border-bottom: 2px solid #ff0000;
 }
-
+/*filmes*/
 .botao-carrinho {
   background-color: #ff0000;
   color: #fff;
