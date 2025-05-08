@@ -18,7 +18,7 @@
       </div>
     </section>
 
-
+     <!--carrinho-->
     <section v-if="mostrarCarrinho" class="carrinho">
       <h2>🛒 Carrinho de Compras</h2>
       <div v-if="carrinho.items.length === 0">
