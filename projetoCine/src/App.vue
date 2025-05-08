@@ -5,7 +5,7 @@
   <header>
   <div class="app">
     <h1><span>Cine</span>BK</h1>
-    <button class="botaocarrinho" @click= "mostrarCarrinho = !mostrarCarrinho">
+    <button class="botao-carrinho" @click= "mostrarCarrinho = !mostrarCarrinho">
       {{ mostrarCarrinho ? 'Fechar' : 'Carrinho' }}
     </button>
   </div>
