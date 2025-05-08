@@ -4,56 +4,56 @@ const produtos = [
         id: 1,
         titulo: 'A cinco passos de você',
         genero: 'Romance',
-        preco:7.1,
+        preco:11.89,
         quantidade:0,
         img: '/images/acincopassosdevoce.png'
-        
-        
+
+
     },
     {
         id: 2,
         titulo: 'A Culpa é das Estrelas',
         genero: 'Romance',
-        preco: 5.7,
+        preco: 19.99,
         quantidade: 0,
         img: '/images/aculpaédasestrelas.png'
-       
+
     },
     {
         id: 3,
         titulo: 'Depois do Universo',
         genero: 'Romance',
-        preco: 9.9,
+        preco: 10.99,
         quantidade: 0,
         img: '/images/depoisdouniverso.png'
-      
-        
+
+
     },
     {
         id: 4,
         titulo: 'Esposa de Mentirinha',
         genero: 'Romance',
-        preco: 9.8,
+        preco: 8.99,
         quantidade: 0,
         img: '/images/esposadementirinha.png'
-        
-     
+
+
     },
     {
         id: 5,
         titulo: 'Gente Grande',
         genero: 'Comédia',
-        preco: 8.7,
+        preco: 8.99,
         quantidade: 0,
         img: '/images/gentegrande.png'
-        
-       
+
+
     },
     {
       id: 6,
       titulo: 'Insterestelar',
       genero: 'Ficção',
-      preco: 7.9,
+      preco: 7.99,
       quantidade: 0,
       img: '/images/interestelar.png'
     },
@@ -61,7 +61,7 @@ const produtos = [
       id: 7,
       titulo: 'Marley e Eu',
       genero: 'Comédia',
-      preco: 7.9,
+      preco: 11.99,
       quantidade: 0,
       img: '/images/marleyeeu.png'
     },
@@ -69,7 +69,7 @@ const produtos = [
       id: 8,
       titulo: 'Meninas Malvadas',
       genero: 'Comédia/Romance',
-      preco: 8.7,
+      preco: 10.89,
       quantidade: 0,
       img: '/images/meangirls.png'
     },
@@ -77,7 +77,7 @@ const produtos = [
       id: 9,
       titulo: 'Minha Culpa',
       genero: 'Romance',
-      preco: 8.7,
+      preco: 12.89,
       quantidade: 0,
       img: '/images/minhaculpa.png'
     },
@@ -85,7 +85,7 @@ const produtos = [
       id: 10,
       titulo: 'Planeta dos Macacos',
       genero: 'Ficção Científica/Ação',
-      preco: 8.7,
+      preco: 8.99,
       quantidade: 0,
       img: '/images/planetadosmacacos.png'
     }
@@ -95,22 +95,45 @@ const produtos = [
 </script>
 
 <template>
-  <h1>CineBK</h1>
+    <header>
+ <nav>
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+
+                <li>
+                    <a href="carrinho.vue">Carrinho</a>
+                </li>
+            </ul>
+        </nav>
+  </header>
+  <main>
+
+
+  <section class="banner">
+    <div>
+      <h1>Seja Bem-Vindo ao <span>Cine</span>BK</h1>
+      <p>Acesse e veja seus filmes favoritos pelo CineBK por um ótimo preço!</p>
+    </div>
+
+  </section>
+</main>
 
 
   <section id="filmes">
-    <h2>Novidades!</h2>
-    
+    <h2 class="novidades">Novidades!</h2>
 
-  <div class="linha">   
+
+  <div class="linha">
     <ul>
       <li style="background-color: white;" v-for="filmes in produtos">
         <img :src="filmes.img" alt="">
         <p class="titulo">{{ filmes.titulo }}</p>
-        <p>{{ filmes.genero }}</p>
-        <p>{{ filmes.preco }}</p>
-        <a href="/*carrinho*/">comprar</a>
-    
+        <p class="gn">{{ filmes.genero }}</p>
+        <p class="preco">R${{ filmes.preco }}</p>
+        <a href="carrinho.vue">comprar</a>
+
       </li>
     </ul>
   </div>
@@ -120,6 +143,42 @@ const produtos = [
 </template>
 
 <style scoped>
+h1 span{
+  color: red;
+  font-weight: bold;
+}
+a{
+    text-decoration:none;
+    color: black;
+    list-style-type: none;
+}
+header{
+	margin: 2vw 4vw 0 4vw;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: right;
+}
+header nav ul li {
+	margin: 0 10px 0 10px;
+	font-weight: bold;
+}
+
+section.banner {
+	display: flex;
+	padding: 10vw 0 5vw 0;
+  margin: 5vw;
+}
+section.banner h1{
+font-weight: bold;
+font-size: 2.7rem;
+
+}
+section.banner p {
+	margin: 2vw 0 2vw 0;
+  font-size: 1.4rem;
+}
 .linha ul {
   display: flex;
   justify-content: center;
@@ -128,6 +187,7 @@ const produtos = [
   justify-content: space-between;
   padding: 0 2vw;
   list-style: none;
+
 }
 .linha p{
   white-space: nowrap;
@@ -141,6 +201,7 @@ const produtos = [
 .linha li {
   width: 20%;
   height: 30vw;
+  margin-bottom: 5vw;
 }
 li img{
   width: 70%;
@@ -152,7 +213,35 @@ li p {
 }
 .titulo{
 font-size: 1.5rem;
-color: rgb(218, 136, 200);
+font-weight: 400;
+color: rgb(214, 32, 32);
+
+}
+
+.novidades{
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 3vw;
+}
+p.gn{
+  color: gray;
+  font-size: 0.8rem;
+
+}
+p.preco{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.linha a{
+  text-align: center;
+  font-size: 1.3rem;
+  background-color: red;
+  border: 0;
+  border-radius: 3px;
+  padding: 4px;
+  color: white;
+  margin-top: 30px;
 }
 
 </style>
