@@ -20,6 +20,12 @@
     <button class="botao-adicionar" @click="adcionarAoCarrinho(filme)">Adcionar ao Carrinho</button>
   </div>
 </section>
+<section v-if="mostrarCarrinho" class="carrinho">
+  <h2>Carrinho de Compras</h2>
+  <div v-if="carrinho.items.length === 0">
+    <p>Carrinho Vazio</p>
+  </div>
+</section>
 </template>
 
 <style scoped>
