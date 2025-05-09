@@ -8,6 +8,7 @@
     </header>
 
 
+
     <section class="filmes">
       <div v-for="filme in filmes" :key="filme.id" class="filme">
         <img :src="filme.capa" alt="Capa do filme" />
@@ -44,6 +45,7 @@
       </div>
     </section>
   </div>
+
 </template>
 
 <script>
