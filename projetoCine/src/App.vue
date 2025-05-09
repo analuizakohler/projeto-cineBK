@@ -68,13 +68,13 @@ export default {
         { id: 3,
           titulo: 'M3GAN',
           sinopse: 'Terror/Ficção',
-          preco: 14.9,
+          preco: 9.9,
           capa: 'https://br.web.img2.acsta.net/c_310_420/pictures/22/10/11/19/20/4591973.jpg' },
 
         { id: 4,
           titulo: 'Todos Menos Você',
           sinopse: 'Comédia/Romance',
-          preco: 24.9,
+          preco: 4.9,
           capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/23/10/19/16/00/5781108.jpg' },
 
         { id: 5,
@@ -86,34 +86,34 @@ export default {
           {id: 6,
             titulo: 'A Cinco Passos de Você',
             sinopse: 'Comédia/Romance',
-            preco: 9.9,
+            preco: 7.0,
             capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/19/02/19/15/31/1517190.jpg'
           },
 
           {id: 7,
             titulo: 'É Assim que Acaba',
             sinopse: 'Comédia/Romance',
-            preco: 9.9,
+            preco: 9.5,
             capa: 'https://shoppingcidadedasflores.com.br/wp-content/uploads/2024/08/E-assim-que-acaba-500x675.jpg'
           },
 
           {id: 8,
           titulo: 'Depois do Universo',
           sinopse: 'Comédia/Romance',
-          preco: 9.9,
+          preco: 4.9,
           capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/22/10/27/23/27/5626842.jpg' },
 
           {id: 9,
             titulo: 'Sexta-Feira 13',
             sinopse: 'Terror/Crime',
-            preco: 9.9,
+            preco: 10.09,
             capa: 'https://br.web.img3.acsta.net/c_310_420/pictures/15/03/10/20/18/175541.jpg'
           },
 
           {id: 10,
             titulo: 'Os Farofeiros',
             sinopse: 'Comédia',
-            preco: 9.9,
+            preco: 6.17,
             capa: 'https://br.web.img2.acsta.net/c_310_420/pictures/18/01/03/19/24/3938254.jpg'
           },
       ],
