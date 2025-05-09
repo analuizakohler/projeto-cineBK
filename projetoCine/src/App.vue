@@ -3,7 +3,7 @@
     <header>
       <h1>🎬 CINE BK</h1>
       <button class="botao-carrinho" @click="mostrarCarrinho = !mostrarCarrinho">
-        🛒 {{ mostrarCarrinho ? 'Fechar' : 'Carrinho' }}
+        <span>🛒</span> {{ mostrarCarrinho ? 'Fechar' : 'Carrinho' }}
       </button>
     </header>
 
@@ -56,13 +56,13 @@ export default {
         { id: 1,
         titulo: 'Planeta dos Macacos: A origem',
         sinopse: 'Ficção Cietífica/Ação',
-        preco: 19.9,
+        preco: 7.9,
         capa: 'https://br.web.img3.acsta.net/c_310_420/medias/nmedia/18/87/35/38/19874625.jpg' },
 
         { id: 2,
         titulo: 'Marley & Eu',
         sinopse: 'Infantil/Comédia',
-        preco: 29.9,
+        preco: 5.5,
         capa: 'https://br.web.img2.acsta.net/c_310_420/medias/nmedia/18/87/14/14/20028631.jpg' },
 
         { id: 3,
@@ -91,7 +91,7 @@ export default {
           },
 
           {id: 7,
-            titulo: 'Como Eu Era Antes de Você',
+            titulo: 'É Assim que Acaba',
             sinopse: 'Comédia/Romance',
             preco: 9.9,
             capa: 'https://shoppingcidadedasflores.com.br/wp-content/uploads/2024/08/E-assim-que-acaba-500x675.jpg'
@@ -180,15 +180,20 @@ header {
 }
 /*filmes*/
 .botao-carrinho {
-  background-color: #ff0000;
+  background-color: #1a1a1a;
   color: #fff;
-  border: none;
+  border: 1px solid #ff0000;
   padding: 0.5rem 1rem;
   font-weight: bold;
   cursor: pointer;
   border-radius: 4px;
+  transition: 0.2s ease-in-out;
 }
-
+.botao-carrinho:hover{
+  border: 1px solid #1a1a1a;
+  color: #fdfdfd;
+  background-color: #ff0000;
+}
 .filmes {
   display: flex;
   flex-wrap: wrap;
@@ -204,8 +209,12 @@ header {
   padding: 1rem;
   width: 220px;
   text-align: center;
+  transition: 0.2s ease-in-out;
 }
+.filme:hover{
+  border: 1px solid #ff0000;
 
+}
 .filme img {
   width: 100%;
   border-radius: 4px;
@@ -220,10 +229,16 @@ header {
 .botao-adicionar {
   background-color: #ff0000;
   color: #fff;
-  border: none;
+  border: 1px solid #ff0000;
   padding: 0.4rem 0.8rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+.botao-adicionar:hover{
+  color: #ff0000;
+  background-color: #1a1a1a;
+  border: 1px solid #ff0000;
 }
 
 .carrinho {
